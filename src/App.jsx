@@ -1,9 +1,11 @@
 
 
-const App=() => {
+function App(){
+  console.log("Hello ")
   return (
+    <div>
     <p> Hello world!!</p>
-     
+    </div>
   )
 }
 
