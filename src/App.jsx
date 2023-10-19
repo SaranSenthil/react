@@ -83,7 +83,11 @@ function App(props) {
   const notes =props.notes;
   //desrtucture
   //const {notes}=props;
-  console.log(notes);
+  // console.log(notes);
+  const addnote =(event)=>{
+    event.preventDefault();
+    console.log('button clicked',event.target);
+  }
   return (
     <div>
       <h1>
@@ -102,6 +106,11 @@ function App(props) {
             <Notes key={note.id} note={note}/>
         )}
       </ul>
+      <form onClick={addnote}>
+        <input />       
+          <button type="submit">Save</button>
+          <button onClick={()=> console.log('clicked')}>Save click</button>
+      </form>
     </div>
   )
 }
