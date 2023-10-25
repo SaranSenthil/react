@@ -19,22 +19,22 @@
 // // export default App
 
 // //Multiple component
-// // function Hello(){
-// //   return(
-// //     <p>Hello world!!!!!!!!</p>
-// //   )
-// // }
+// function Hello(){
+//   return(
+//     <p>Hello world!!!!!!!!</p>
+//   )
+// }
 
-// // function App(){
-// //   return(
-// //     <div>
-// //       <h1>Greetings</h1>
-// //       <Hello/>
-// //       <Hello/>
-// //       <Hello/>
-// //     </div>
-// //   )
-// // }
+// function App(){
+//   return(
+//     <div>
+//       <h1>Greetings</h1>
+//       <Hello/>
+//       <Hello/>
+//       <Hello/>
+//     </div>
+//   )
+// }
 // // export default App
 
 // // //Multiple component with passing data -Props
@@ -75,44 +75,17 @@
 //   )
 // }
 // export default App
+import React from 'react';
+import PriceCardList from './components/PriceCardList';
+import './Styles/PriceCard.css';
 
-import React from 'react'
-import Notes from './components/Notes';
 
-function App(props) {
-  const notes =props.notes;
-  //desrtucture
-  //const {notes}=props;
-  // console.log(notes);
-  const addnote =(event)=>{
-    event.preventDefault();
-    console.log('button clicked',event.target);
-  }
+function App() {
   return (
-    <div>
-      <h1>
-        Notes
-      </h1>
-      
-      <ul>
-      
-        <li>{notes[0].content}</li>
-        <li>{notes[1].content}</li>
-        <li>{notes[2].content}</li>
-      </ul>
-      <ul>
-        {
-          notes.map(note=>
-            <Notes key={note.id} note={note}/>
-        )}
-      </ul>
-      <form onClick={addnote}>
-        <input />       
-          <button type="submit">Save</button>
-          <button onClick={()=> console.log('clicked')}>Save click</button>
-      </form>
+    <div className="App">
+      <PriceCardList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

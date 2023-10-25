@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: rgb(86, 77, 249);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 50px;
+}
+.price-card {
+  background-color: white;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  width: 300px;
+}
+
+.price-card h6 {
+  font-weight: bold;
+  color: grey;
+}
+
+.price {
+  font-size: 24px;
+}
+
+.features {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.features li {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.strikeout {
+  /* text-decoration: line-through; */
+  color: #525354;
+}
+
+.select-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  border-radius: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 250px;
+  transition: background-color 0.3s;
+}
+
+.select-button:hover {
+  background-color: #0056b3;
+}
+
+.price-card-list {
+  display: flex;
+  justify-content: space-between;
+}
