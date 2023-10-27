@@ -1,22 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
+//State : state refers to the data. ie) used to manage and represent the internal state of the component
 
 class App extends Component {
-  //componentDidMount  called after the comp has rendered to the DOM.
-componentDidMount(){
-  console.log('componet mounted')
-}
-// called on props / state changes
-componentDidUpdate(){
-  console.log('componet state updated')
-}
+  constructor(props)
+  {
+    //to call the parent class constructor
+    super(props);
 
-componentWillUnmount(){
-  //invoked just before the comp is removed from DOM
-  //releasing memory and cancelling timers
-}
+    //define states:
+    this.state={
+votes: 0,
+    }
+  }
+  increment=()=>{
+    //update the state
+     this.setState({
+      votes:this.state.votes+1,
+
+    })
+  }
   render() {
     return (
-      <div>Hi Hello!!!!!!!!!!!!</div>
+      <div>
+        <p>
+          Votes: {this. state.votes}
+        </p>
+        <button onClick={this.increment}>Click to Vote</button>
+      </div>
     )
   }
 }
