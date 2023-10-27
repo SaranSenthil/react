@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 class Hello extends Component {
   render() {
+    const {name}=  this.props;
     return (
-      <p> Hello World</p>
+      <p> Hello {name} !!! </p>
     )
   }
 }
@@ -11,7 +12,7 @@ class Hello extends Component {
  class App extends Component {
   render() {
     return (
-      <Hello />
+      <Hello name='Saranya' />
     )
   }
 }
