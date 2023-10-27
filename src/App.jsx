@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 
-class Hello extends Component {
-  render() {
-    const {name}=  this.props;
-    return (
-      <p> Hello {name} !!! </p>
-    )
-  }
+class App extends Component {
+  //componentDidMount  called after the comp has rendered to the DOM.
+componentDidMount(){
+  console.log('componet mounted')
+}
+// called on props / state changes
+componentDidUpdate(){
+  console.log('componet state updated')
 }
 
- class App extends Component {
+componentWillUnmount(){
+  //invoked just before the comp is removed from DOM
+  //releasing memory and cancelling timers
+}
   render() {
     return (
-      <Hello name='Saranya' />
+      <div>Hi Hello!!!!!!!!!!!!</div>
     )
   }
 }
