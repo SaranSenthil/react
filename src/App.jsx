@@ -4,8 +4,7 @@ import React, { Component } from 'react'
 
 class App extends Component {
   constructor(props)
-  {
-    //to call the parent class constructor
+  {    //to call the parent class constructor
     super(props);
 
     //define states:
@@ -17,7 +16,18 @@ votes: 0,
     //update the state
      this.setState({
       votes:this.state.votes+1,
-
+    })
+  }
+  decrement=()=>{
+    //update the state
+     this.setState({
+      votes:this.state.votes-1,
+    })
+  }
+  reset=()=>{
+    //update the state
+     this.setState({
+      votes:0,
     })
   }
   render() {
@@ -26,7 +36,13 @@ votes: 0,
         <p>
           Votes: {this. state.votes}
         </p>
-        <button onClick={this.increment}>Click to Vote</button>
+      
+       <div className="d-flex justify-content-evenly" >
+        <button onClick={this.increment}>Click to Increment</button>
+        <button onClick={this.decrement}>Click to Decrement</button>
+        <button onClick={this.reset}>Reset</button>
+        </div>
+        
       </div>
     )
   }
